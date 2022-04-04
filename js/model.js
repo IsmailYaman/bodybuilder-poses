@@ -9,7 +9,6 @@ let state = 'waiting';
 let targeLabel;
 
 
-
 function setup() {
   createCanvas(640, 480);
   
@@ -64,22 +63,22 @@ function gotResults(error, results) {
   // console.log(results);
   if(results[0].label == 'a'){
     poseName.innerHTML = 'Relaxed Pose'
-    confidence.innerHTML = results[0].confidence
+    confidence.innerHTML = Math.round(results[0].confidence * 100).toFixed(0) + '%'	
     console.log('relaxed pose');
   }
   if(results[0].label == 'b'){
     poseName.innerHTML = 'Front double biceps pose'
-    confidence.innerHTML = results[0].confidence
+    confidence.innerHTML = Math.round(results[0].confidence * 100).toFixed(0) + '%'	
     console.log('front double biceps pose');
   }
   if(results[0].label == 'c'){
     poseName.innerHTML = 'Most muscular pose'
-    confidence.innerHTML = results[0].confidence
+    confidence.innerHTML = Math.round(results[0].confidence * 100).toFixed(0) + '%'	
     console.log('most muscular pose');
   }
   if(results[0].label == 'd'){
     poseName.innerHTML = 'Front lat spread pose'
-    confidence.innerHTML = results[0].confidence
+    confidence.innerHTML = Math.round(results[0].confidence * 100).toFixed(0) + '%'	
     console.log('front lat spread pose');
   }
   classifyPose(); 
