@@ -5,7 +5,7 @@
   body {
     font-family:sans-serif;
     margin:0; padding:0;
-    background-color: #bb3e03!important;
+    background-color: #0F1012!important;
   }
 
   div {
@@ -24,4 +24,10 @@
   }
   span{
     font-size: 30px;
+  }
+
+  .logo{
+    position:absolute;
+    z-index:-1;
+    bottom: 0;
   }
